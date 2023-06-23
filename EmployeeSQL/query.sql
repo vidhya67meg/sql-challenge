@@ -12,11 +12,11 @@ WHERE EXTRACT(YEAR FROM hire_date::date) = 1986;
 
 --List the manager of each department along with their department number, department name, 
 --employee number, last name, and first name 
-SELECT dept.dept_no, dept.dept_name, employees.emp_no, 
+select dept.dept_no, dept.dept_name, employees.emp_no, 
 employees.last_name,employees.first_name
-FROM dept
-JOIN dept_manager ON dept.dept_no = dept_manager.dept_no
-JOIN employees ON dept_manager.emp_no = employees.emp_no;
+from dept
+join dept_manager on dept.dept_no = dept_manager.dept_no
+join employees on dept_manager.emp_no = employees.emp_no;
 
 --List the department number for each employee along with that employee’s employee number, 
 --last name, first name, and department name 
