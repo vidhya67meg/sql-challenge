@@ -8,7 +8,7 @@ employees.emp_no = salaries.emp_no;
 --List the first name, last name, and hire date for the employees who were hired in 1986 
 select first_name, last_name, hire_date
 from employees
-WHERE EXTRACT(YEAR FROM hire_date::date) = 1986;
+where EXTRACT(year from hire_date::date) = 1986;
 
 --List the manager of each department along with their department number, department name, 
 --employee number, last name, and first name 
@@ -53,5 +53,5 @@ order by dept.dept_name;
 --employees share each last name) 
 select last_name, count(*) as count
 from employees
-GROUP BY last_name
+group by last_name
 order by count desc;
